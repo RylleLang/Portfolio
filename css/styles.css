@@ -508,7 +508,14 @@ strong { color: var(--text-bright); font-weight: 600; }
 /* ═══════════════════ CONTACT ═══════════════════ */
 .contact { max-width: 620px; margin-inline: auto; text-align: center; padding-block: 30px 20px; }
 .contact p { margin-bottom: 44px; }
-.socials { display: flex; align-items: center; justify-content: center; gap: 30px; margin-top: 52px; }
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 28px;
+  margin-top: 52px;
+}
 .socials a,
 .socials .social-btn {
   color: var(--text-muted);
@@ -517,15 +524,6 @@ strong { color: var(--text-bright); font-weight: 600; }
 }
 .socials a:hover,
 .socials .social-btn:hover { color: var(--accent); transform: translateY(-4px); }
-
-.contact__phone {
-  margin: 26px 0 0;
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  letter-spacing: 0.02em;
-}
-.contact__phone a { margin-left: 8px; }
-.contact__phone a:hover { color: var(--text-bright); }
 
 /* button styled to match the anchor siblings */
 .social-btn {

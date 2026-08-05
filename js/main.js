@@ -120,17 +120,23 @@
   }
 
   /* ── social buttons with a non-visible target ────────── */
-  var socialBtns = document.querySelectorAll(".social-btn[data-fb]");
+  var socialBtns = document.querySelectorAll(".social-btn[data-url]");
 
   Array.prototype.forEach.call(socialBtns, function (btn) {
     btn.addEventListener("click", function () {
       var url;
       try {
-        url = atob(btn.getAttribute("data-fb"));
+        url = atob(btn.getAttribute("data-url"));
       } catch (e) {
         return;
       }
-      window.open(url, "_blank", "noopener,noreferrer");
+      // app deep links (viber:) must stay in the current tab — window.open
+      // leaves an orphaned blank tab behind when the handler takes over
+      if (/^https?:/i.test(url)) {
+        window.open(url, "_blank", "noopener,noreferrer");
+      } else {
+        window.location.href = url;
+      }
     });
   });
 
