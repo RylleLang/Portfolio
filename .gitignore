@@ -1,6 +1,10 @@
 # local tooling config — not part of the site
 .claude/
 
+# company-specific cover letters stay local — a public repo shouldn't show
+# a letter addressed to one employer while you're applying to others
+resume/cover-letter-*.html
+
 # OS / editor cruft
 Thumbs.db
 desktop.ini

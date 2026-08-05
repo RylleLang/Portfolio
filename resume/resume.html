@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Rylle Airon J. Mantaring — Resume</title>
+<style>
+  @page { size: Letter; margin: 13mm 14mm; }
+
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Calibri", "Segoe UI", Arial, sans-serif;
+    font-size: 10.2pt;
+    line-height: 1.34;
+    color: #111;
+    margin: 0;
+    background: #fff;
+  }
+  a { color: #111; text-decoration: none; }
+
+  h1 {
+    font-size: 19pt;
+    letter-spacing: 0.5px;
+    margin: 0 0 3px;
+    text-transform: uppercase;
+  }
+  .contact { font-size: 9.4pt; margin-bottom: 11px; }
+
+  h2 {
+    font-size: 10.4pt;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    margin: 13px 0 5px;
+    padding-bottom: 2px;
+    border-bottom: 1.1px solid #111;
+  }
+
+  h3 { font-size: 10.4pt; margin: 8px 0 1px; }
+  h3 .co { font-weight: 600; }
+  .role-line {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: baseline;
+  }
+  .date { font-size: 9.3pt; font-style: italic; white-space: nowrap; }
+  .sub { font-size: 9.4pt; font-style: italic; margin: 0 0 3px; color: #333; }
+
+  ul { margin: 2px 0 0; padding-left: 16px; }
+  li { margin-bottom: 2.5px; }
+  p { margin: 0 0 4px; }
+
+  .skills p { margin-bottom: 3px; }
+  .skills b { font-weight: 700; }
+
+  .edu-line { display: flex; justify-content: space-between; gap: 12px; }
+</style>
+</head>
+<body>
+
+  <h1>Rylle Airon J. Mantaring</h1>
+  <div class="contact">
+    Rodriguez, Rizal | rylleairon@gmail.com |
+    <a href="https://ryllelang.github.io/Portfolio/">ryllelang.github.io/Portfolio</a> |
+    <a href="https://github.com/RylleLang">github.com/RylleLang</a> | +63 977 783 3879
+  </div>
+
+  <h2>Professional Summary</h2>
+  <p>
+    Computer Engineering student specializing in Data Science with hands-on ERP implementation
+    experience across two live client deployments. Configured Odoo ERP spanning manufacturing,
+    inventory, point of sale, and eCommerce &mdash; carrying each build from requirement gathering
+    through quality assurance, end-user documentation, and post-deployment support. Combines
+    enterprise systems work with full-stack development and AI workflow automation using n8n,
+    Gemini, and Claude. Strong analytical foundation, comfortable translating business processes
+    into working systems, and motivated by R&amp;D and continuous learning in fast-moving
+    environments.
+  </p>
+
+  <h2>Technical Skills &amp; Competencies</h2>
+  <div class="skills">
+    <p><b>ERP &amp; Enterprise Systems:</b> Odoo ERP (Sales/CRM, Inventory, Manufacturing/MRP with
+      Bills of Materials, Purchase, Point of Sale, Accounting, Website/eCommerce), business process
+      mapping, requirement gathering, configuration, QA and UAT support, end-user manuals,
+      GoHighLevel CRM (multi-tenant administration).</p>
+    <p><b>AI &amp; Automation:</b> n8n workflow automation, Google Gemini, Claude, ChatGPT, prompt
+      engineering, tool calling / Text-to-SQL, webhook and REST API integrations.</p>
+    <p><b>Programming &amp; Frameworks:</b> Python, JavaScript (ES6+), C++, C#, SQL, Node.js/Express,
+      React Native, Astro, Streamlit, Flask, Unity.</p>
+    <p><b>Data &amp; Infrastructure:</b> PostgreSQL, MongoDB, SQLite, Supabase, ETL pipeline design,
+      Linux/UNIX VPS administration, Cloudflare Pages/R2, AWS &amp; GCP fundamentals, Git.</p>
+    <p><b>Data Science &amp; ML:</b> scikit-learn, TensorFlow, Keras, OpenCV, YOLOv8, Pandas, NumPy,
+      Matplotlib, Seaborn.</p>
+  </div>
+
+  <h2>ERP &amp; Enterprise Systems Experience</h2>
+
+  <div class="role-line">
+    <h3>Associate Systems Developer <span class="co">| Bathala Solutions Inc.</span></h3>
+    <span class="date">November 2024 &ndash; 2025</span>
+  </div>
+  <p class="sub">Consultancy &mdash; Odoo ERP</p>
+  <ul>
+    <li>Developed and continuously improved an Odoo ERP system modelled on a real subject company,
+      producing the reference implementation that the firm's client product offerings were built from.</li>
+    <li>Delivered a full production-to-counter ERP for a food manufacturing and retail business:
+      Purchase and vendor reordering, Inventory stock moves, Manufacturing with Bills of Materials and
+      production orders, Point of Sale terminals, and Invoicing.</li>
+    <li>Implemented a retail and eCommerce ERP for a beauty products business covering Sales and CRM,
+      Inventory with product variants, and a Website storefront running against shared stock.</li>
+    <li>Ran continuous quality assurance across modules to catch regressions before client release, and
+      supported deployments alongside client management and administrative teams.</li>
+    <li>Authored end-user manuals tailored to each client's own workflows, enabling non-technical staff
+      to operate the system unaided.</li>
+  </ul>
+
+  <h2>Software Development &amp; AI Automation Experience</h2>
+
+  <div class="role-line">
+    <h3>I.T. Intern, Full-Stack Developer <span class="co">| Integrity Realty PH</span></h3>
+    <span class="date">February 2026 &ndash; Present</span>
+  </div>
+  <p class="sub">Project-Based</p>
+  <ul>
+    <li>Built and maintain PhilProp, the company's public real estate listing platform &mdash; an Astro
+      SSR application on Cloudflare Pages with Supabase authentication and PostgreSQL, serving buyers,
+      agents, and administrators through role-based access.</li>
+    <li>Own the company's GoHighLevel CRM as a multi-tenant configuration: one agency key writing into
+      per-client sub-accounts with their own pipelines and stages, so every inbound lead routes to the
+      correct agent automatically.</li>
+    <li>Designed and operate the n8n AI agent stack &mdash; a Facebook Messenger chatbot that qualifies
+      buyers and sellers, queries a live PostgreSQL property database in natural language via tool
+      calling, computes payment schedules, and pushes qualified leads into the CRM by webhook.</li>
+    <li>Engineered automated ETL pipelines and a schema-verification tool that validates every database
+      query against a live schema snapshot before deploy, eliminating a recurring class of production outage.</li>
+  </ul>
+
+  <div class="role-line">
+    <h3>AquaFilter <span class="co">| Undergraduate Project Design</span></h3>
+    <span class="date">Academic Year 2025&ndash;2026</span>
+  </div>
+  <p class="sub">IoT Laundry Wastewater Filtration &amp; Monitoring System</p>
+  <ul>
+    <li>Built an end-to-end IoT system: ESP32 firmware sampling pH, turbidity, and TDS at pre- and
+      post-filter points, signing each telemetry payload with HMAC-SHA256 so the API rejects spoofed
+      device data.</li>
+    <li>Developed a Node.js/Express and MongoDB backend with JWT authentication, rate limiting, payload
+      validation, time-series indexing, and automatic data expiry; delivered a React Native (Expo) app
+      with live dashboard, analytics, alerts, and maintenance logging.</li>
+  </ul>
+
+  <div class="role-line">
+    <h3>Lutong Bahay <span class="co">| IEEE-Format Research Paper</span></h3>
+    <span class="date">September 2025</span>
+  </div>
+  <p class="sub">Ingredient Detection &amp; Recipe Recommendation using YOLOv8</p>
+  <ul>
+    <li>Trained a YOLOv8 model on a custom 76-ingredient dataset and built a Streamlit application that
+      recommends recipes from detected ingredients; achieved 0.91 mAP@0.5 with recommendations rated
+      relevant in 93 of 100 cases by an independent user panel.</li>
+  </ul>
+
+  <h2>Seminars &amp; Training</h2>
+  <p style="margin-bottom:2px;"><i>Technological Institute of the Philippines &mdash; Quezon City</i></p>
+  <ul>
+    <li>Getting Started with AWS Cloud | October 2025 &nbsp;&middot;&nbsp; Introduction to Cloud Computing | October 2025</li>
+    <li>AI and Analytics in Action: Tackling Real-World Industry Problems with Data-Driven Innovation | September 2025</li>
+    <li>Full Stack in Practice: Professional Skills for the Modern Web | September 2025 &nbsp;&middot;&nbsp; DevOps of the Future | September 2025</li>
+    <li>Azure, SD-WAN, and Firewall Fundamentals | August 2025 &nbsp;&middot;&nbsp; Cloud Essentials for Future Professionals | August 2025</li>
+  </ul>
+
+  <h2>Leadership &amp; Involvement</h2>
+  <ul>
+    <li>Organizer, CpE Department Community Outreach Program &mdash; Cyber-Physical Systems: Hands-On
+      Computer Engineering for Senior High School | S.Y. 2025&ndash;2026</li>
+    <li>Member, Institute of Computer Engineers of the Philippines (ICpEP) &mdash; Student Edition |
+      2023&ndash;2025</li>
+  </ul>
+
+  <h2>Education</h2>
+  <div class="edu-line">
+    <div>
+      <b>Technological Institute of the Philippines (TIP) &mdash; Quezon City</b><br />
+      Bachelor of Science in Computer Engineering, Specialization in Data Science
+    </div>
+    <span class="date">Expected 2026</span>
+  </div>
+
+</body>
+</html>
