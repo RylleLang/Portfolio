@@ -66,7 +66,7 @@
   /* ── scroll reveal ───────────────────────────────────── */
   var revealTargets = document.querySelectorAll(
     ".hero__text, .hero__photo, .section__head, .about__photo, .about__text, " +
-      ".exp, .card, .twocol__col, .contact"
+      ".exp-card, .card, .twocol__col, .contact"
   );
 
   Array.prototype.forEach.call(revealTargets, function (el) {
