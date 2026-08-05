@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="AquaFilter system architecture: ESP32 sensors to Express API and MongoDB to a React Native app">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a1120"/>
+      <stop offset="1" stop-color="#0d1526"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#6366f1"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#38bdf8" stop-opacity="0.20"/>
+      <stop offset="1" stop-color="#38bdf8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#6366f1" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+    <marker id="arrow2" viewBox="0 0 10 10" refX="8" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#38bdf8" opacity="0.8"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <ellipse cx="200" cy="140" rx="520" ry="360" fill="url(#glowA)"/>
+  <ellipse cx="1400" cy="880" rx="520" ry="360" fill="url(#glowB)"/>
+
+  <!-- title -->
+  <text x="110" y="106" font-family="monospace" font-size="26" fill="#7d8da5" letter-spacing="3">AQUAFILTER</text>
+  <text x="110" y="152" font-family="Inter, system-ui, sans-serif" font-size="34" font-weight="700" fill="#e8f1fb">IoT laundry wastewater filtration &#8212; system architecture</text>
+  <line x1="110" y1="192" x2="1490" y2="192" stroke="#ffffff" stroke-opacity="0.10" stroke-width="1"/>
+
+  <!-- ══ Panel 1 — device ══ -->
+  <g>
+    <rect x="110" y="266" width="380" height="404" rx="18" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.13"/>
+    <text x="140" y="310" font-family="monospace" font-size="15" fill="#38bdf8" letter-spacing="2">01 &#183; DEVICE</text>
+    <text x="140" y="348" font-family="Inter, system-ui, sans-serif" font-size="23" font-weight="700" fill="#e8f1fb">ESP32 NodeMCU</text>
+    <line x1="140" y1="372" x2="460" y2="372" stroke="#ffffff" stroke-opacity="0.10"/>
+    <g font-family="Inter, system-ui, sans-serif" font-size="17" fill="#b9c6da">
+      <circle cx="147" cy="415" r="4" fill="#38bdf8"/><text x="166" y="421">pH probe &#8212; 0&#8211;14 scale</text>
+      <circle cx="147" cy="463" r="4" fill="#38bdf8"/><text x="166" y="469">Turbidity &#8212; NTU</text>
+      <circle cx="147" cy="511" r="4" fill="#38bdf8"/><text x="166" y="517">TDS &#8212; ppm</text>
+      <circle cx="147" cy="559" r="4" fill="#38bdf8"/><text x="166" y="565">Temperature &#8212; &#176;C</text>
+      <circle cx="147" cy="607" r="4" fill="#6366f1"/><text x="166" y="613" fill="#7d8da5">Pre- / post-filter taps</text>
+    </g>
+  </g>
+
+  <!-- arrow 1 -->
+  <line x1="498" y1="440" x2="596" y2="440" stroke="#38bdf8" stroke-opacity="0.6" stroke-width="2" marker-end="url(#arrow2)"/>
+  <text x="547" y="416" font-family="monospace" font-size="13" fill="#7d8da5" text-anchor="middle">HMAC-SHA256</text>
+  <text x="547" y="478" font-family="monospace" font-size="13" fill="#7d8da5" text-anchor="middle">JSON / 5s</text>
+
+  <!-- ══ Panel 2 — backend ══ -->
+  <g>
+    <rect x="610" y="266" width="380" height="404" rx="18" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.13"/>
+    <text x="640" y="310" font-family="monospace" font-size="15" fill="#38bdf8" letter-spacing="2">02 &#183; BACKEND</text>
+    <text x="640" y="348" font-family="Inter, system-ui, sans-serif" font-size="23" font-weight="700" fill="#e8f1fb">Express + MongoDB</text>
+    <line x1="640" y1="372" x2="960" y2="372" stroke="#ffffff" stroke-opacity="0.10"/>
+    <g font-family="Inter, system-ui, sans-serif" font-size="17" fill="#b9c6da">
+      <circle cx="647" cy="415" r="4" fill="#38bdf8"/><text x="666" y="421">Signature verification</text>
+      <circle cx="647" cy="463" r="4" fill="#38bdf8"/><text x="666" y="469">JWT auth &#183; rate limiting</text>
+      <circle cx="647" cy="511" r="4" fill="#38bdf8"/><text x="666" y="517">Payload validation</text>
+      <circle cx="647" cy="559" r="4" fill="#38bdf8"/><text x="666" y="565">Time-series &#183; 90-day TTL</text>
+      <circle cx="647" cy="607" r="4" fill="#6366f1"/><text x="666" y="613" fill="#7d8da5">Cycle &amp; maintenance logs</text>
+    </g>
+  </g>
+
+  <!-- arrow 2 -->
+  <line x1="998" y1="440" x2="1096" y2="440" stroke="#38bdf8" stroke-opacity="0.6" stroke-width="2" marker-end="url(#arrow2)"/>
+  <text x="1047" y="416" font-family="monospace" font-size="13" fill="#7d8da5" text-anchor="middle">REST + JWT</text>
+  <text x="1047" y="478" font-family="monospace" font-size="13" fill="#7d8da5" text-anchor="middle">push alerts</text>
+
+  <!-- ══ Panel 3 — mobile ══ -->
+  <g>
+    <rect x="1110" y="266" width="380" height="404" rx="18" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.13"/>
+    <text x="1140" y="310" font-family="monospace" font-size="15" fill="#38bdf8" letter-spacing="2">03 &#183; MOBILE</text>
+    <text x="1140" y="348" font-family="Inter, system-ui, sans-serif" font-size="23" font-weight="700" fill="#e8f1fb">React Native / Expo</text>
+    <line x1="1140" y1="372" x2="1460" y2="372" stroke="#ffffff" stroke-opacity="0.10"/>
+    <g font-family="Inter, system-ui, sans-serif" font-size="17" fill="#b9c6da">
+      <circle cx="1147" cy="415" r="4" fill="#38bdf8"/><text x="1166" y="421">Live dashboard</text>
+      <circle cx="1147" cy="463" r="4" fill="#38bdf8"/><text x="1166" y="469">Analytics &amp; charts</text>
+      <circle cx="1147" cy="511" r="4" fill="#38bdf8"/><text x="1166" y="517">Alerts</text>
+      <circle cx="1147" cy="559" r="4" fill="#38bdf8"/><text x="1166" y="565">Maintenance log</text>
+      <circle cx="1147" cy="607" r="4" fill="#6366f1"/><text x="1166" y="613" fill="#7d8da5">Secure token storage</text>
+    </g>
+  </g>
+
+  <!-- ══ quality tier strip ══ -->
+  <text x="110" y="742" font-family="monospace" font-size="15" fill="#38bdf8" letter-spacing="2">POST-FILTER WATER CLASSIFICATION</text>
+
+  <g font-family="Inter, system-ui, sans-serif">
+    <rect x="110" y="766" width="440" height="86" rx="12" fill="#ffffff" fill-opacity="0.045" stroke="#22c55e" stroke-opacity="0.35"/>
+    <text x="136" y="800" font-size="19" font-weight="600" fill="#e8f1fb">Safe</text>
+    <text x="136" y="828" font-family="monospace" font-size="14" fill="#7d8da5">pH 6.5&#8211;8.5 &#183; &lt;5 NTU &#183; &lt;500 ppm</text>
+
+    <rect x="580" y="766" width="440" height="86" rx="12" fill="#ffffff" fill-opacity="0.045" stroke="#eab308" stroke-opacity="0.35"/>
+    <text x="606" y="800" font-size="19" font-weight="600" fill="#e8f1fb">Reuse</text>
+    <text x="606" y="828" font-family="monospace" font-size="14" fill="#7d8da5">pH 5.5&#8211;9.0 &#183; &lt;50 NTU &#183; &lt;1000 ppm</text>
+
+    <rect x="1050" y="766" width="440" height="86" rx="12" fill="#ffffff" fill-opacity="0.045" stroke="#ef4444" stroke-opacity="0.35"/>
+    <text x="1076" y="800" font-size="19" font-weight="600" fill="#e8f1fb">Unsafe</text>
+    <text x="1076" y="828" font-family="monospace" font-size="14" fill="#7d8da5">outside reuse thresholds</text>
+  </g>
+
+  <text x="110" y="922" font-family="monospace" font-size="16" fill="#4d5b73">Undergraduate project design &#183; Technological Institute of the Philippines</text>
+  <text x="1490" y="922" font-family="monospace" font-size="16" fill="#4d5b73" text-anchor="end">system architecture &#8212; not a screenshot</text>
+</svg>

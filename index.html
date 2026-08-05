@@ -467,6 +467,98 @@
           </div>
         </article>
 
+        <!-- ── Project 5 ── -->
+        <article class="card">
+          <!-- Diagram, not a screenshot — see the note in its bottom-right corner. -->
+          <img src="assets/projects/aquafilter.svg"
+               alt="Architecture diagram of the AquaFilter IoT wastewater filtration system"
+               width="1600" height="1000" loading="lazy" />
+
+          <div class="card__body">
+            <div class="card__topline">
+              <ul class="tags">
+                <li>ESP32</li><li>IoT</li><li>Node.js</li>
+                <li>MongoDB</li><li>React Native</li><li>Expo</li>
+              </ul>
+              <span class="card__date mono">Undergraduate Thesis</span>
+            </div>
+
+            <h3 class="card__title">AquaFilter</h3>
+            <p class="card__sub mono">IoT Laundry Wastewater Filtration &amp; Monitoring System</p>
+
+            <ul class="bullets">
+              <li>
+                Built an end-to-end IoT system that filters laundry wastewater and grades it
+                for safe reuse &mdash; <strong>ESP32 sensors</strong> through a REST API to a
+                mobile app, hardware to interface.
+              </li>
+              <li>
+                Wrote ESP32 firmware that samples pH, turbidity (NTU), and TDS (ppm) at both
+                pre- and post-filter taps, then <strong>signs each telemetry payload with
+                HMAC-SHA256</strong> so the API can reject spoofed device data.
+              </li>
+              <li>
+                Built a Node/Express API with JWT authentication, per-route rate limiting,
+                payload validation, and Winston logging, backed by MongoDB with compound
+                indexes for time-range queries and a 90-day TTL to cap storage growth.
+              </li>
+              <li>
+                Modelled discrete filtration cycles so pre- and post-filter readings are
+                compared per run, and classified output water as <strong>safe, reusable, or
+                unsafe</strong> against WHO and EPA thresholds.
+              </li>
+              <li>
+                Shipped a React Native (Expo) app with a live dashboard, time-series charts,
+                alerts, and a maintenance log &mdash; using secure token storage and Expo push
+                notifications for out-of-range readings.
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- ── Project 6 ── -->
+        <article class="card">
+          <!-- Diagram, not a screenshot — see the note in its bottom-right corner. -->
+          <img src="assets/projects/ghl-crm.svg"
+               alt="Diagram of the multi-tenant GoHighLevel CRM build for Integrity Realty"
+               width="1600" height="1000" loading="lazy" />
+
+          <div class="card__body">
+            <div class="card__topline">
+              <ul class="tags">
+                <li>GoHighLevel</li><li>CRM</li><li>Marketing Automation</li>
+                <li>Webhooks</li><li>n8n</li>
+              </ul>
+              <span class="card__date mono">2026 &ndash; Present</span>
+            </div>
+
+            <h3 class="card__title">Integrity Realty CRM</h3>
+            <p class="card__sub mono">Multi-Tenant GoHighLevel Build &amp; Automation</p>
+
+            <ul class="bullets">
+              <li>
+                Built and own the company's entire <strong>GoHighLevel</strong> CRM &mdash;
+                a multi-tenant setup where one agency key writes into per-client sub-accounts,
+                each with its own pipelines and stages.
+              </li>
+              <li>
+                Wired inbound property inquiries from Facebook Messenger, the website chatbot,
+                and web forms into the CRM by webhook, so every lead lands in the correct
+                agent's pipeline automatically instead of in a shared inbox.
+              </li>
+              <li>
+                Captured lead context on entry &mdash; contact details plus the originating
+                page or ad &mdash; giving agents an actionable record rather than a raw chat
+                transcript.
+              </li>
+              <li>
+                Connected the CRM to the <strong>n8n</strong> AI agent stack so qualified
+                conversations become opportunities without manual re-entry.
+              </li>
+            </ul>
+          </div>
+        </article>
+
       </div>
     </section>
 

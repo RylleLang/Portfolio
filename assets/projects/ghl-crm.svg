@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="Diagram of the multi-tenant GoHighLevel CRM: lead sources routed into per-client sub-accounts and pipelines">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a1120"/>
+      <stop offset="1" stop-color="#0d1526"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#6366f1"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#38bdf8" stop-opacity="0.20"/>
+      <stop offset="1" stop-color="#38bdf8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#6366f1" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+    <marker id="arrow3" viewBox="0 0 10 10" refX="8" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#38bdf8" opacity="0.8"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <ellipse cx="180" cy="160" rx="520" ry="360" fill="url(#glowA)"/>
+  <ellipse cx="1420" cy="860" rx="520" ry="360" fill="url(#glowB)"/>
+
+  <!-- title -->
+  <text x="110" y="106" font-family="monospace" font-size="26" fill="#7d8da5" letter-spacing="3">GOHIGHLEVEL CRM</text>
+  <text x="110" y="152" font-family="Inter, system-ui, sans-serif" font-size="34" font-weight="700" fill="#e8f1fb">Multi-tenant lead routing</text>
+  <line x1="110" y1="192" x2="1490" y2="192" stroke="#ffffff" stroke-opacity="0.10" stroke-width="1"/>
+
+  <!-- ══ Lead sources ══ -->
+  <text x="110" y="252" font-family="monospace" font-size="15" fill="#38bdf8" letter-spacing="2">LEAD SOURCES</text>
+  <g font-family="Inter, system-ui, sans-serif" text-anchor="middle">
+    <rect x="110" y="276" width="290" height="92" rx="14" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.13"/>
+    <text x="255" y="318" font-size="20" font-weight="600" fill="#e8f1fb">Messenger</text>
+    <text x="255" y="345" font-family="monospace" font-size="14" fill="#7d8da5">AI agent &#183; page ads</text>
+
+    <rect x="110" y="392" width="290" height="92" rx="14" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.13"/>
+    <text x="255" y="434" font-size="20" font-weight="600" fill="#e8f1fb">Website chatbot</text>
+    <text x="255" y="461" font-family="monospace" font-size="14" fill="#7d8da5">PhilProp</text>
+
+    <rect x="110" y="508" width="290" height="92" rx="14" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.13"/>
+    <text x="255" y="550" font-size="20" font-weight="600" fill="#e8f1fb">Web forms</text>
+    <text x="255" y="577" font-family="monospace" font-size="14" fill="#7d8da5">property inquiries</text>
+  </g>
+
+  <!-- funnel arrows into the hub -->
+  <g stroke="#38bdf8" stroke-opacity="0.55" stroke-width="2" fill="none" marker-end="url(#arrow3)">
+    <path d="M 408 322 C 470 322, 470 430, 528 436"/>
+    <path d="M 408 438 L 528 438"/>
+    <path d="M 408 554 C 470 554, 470 446, 528 440"/>
+  </g>
+  <text x="468" y="392" font-family="monospace" font-size="13" fill="#7d8da5" text-anchor="middle">webhook</text>
+
+  <!-- ══ Hub ══ -->
+  <g>
+    <rect x="540" y="356" width="320" height="168" rx="18" fill="#ffffff" fill-opacity="0.07" stroke="#38bdf8" stroke-opacity="0.4"/>
+    <text x="700" y="404" font-family="monospace" font-size="14" fill="#38bdf8" text-anchor="middle" letter-spacing="2">AGENCY KEY</text>
+    <text x="700" y="442" font-family="Inter, system-ui, sans-serif" font-size="23" font-weight="700" fill="#e8f1fb" text-anchor="middle">Routing layer</text>
+    <text x="700" y="474" font-family="monospace" font-size="14" fill="#7d8da5" text-anchor="middle">contact + source captured</text>
+    <text x="700" y="500" font-family="monospace" font-size="14" fill="#7d8da5" text-anchor="middle">n8n AI qualification</text>
+  </g>
+
+  <!-- fan-out arrows -->
+  <g stroke="#38bdf8" stroke-opacity="0.55" stroke-width="2" fill="none" marker-end="url(#arrow3)">
+    <path d="M 868 420 C 930 420, 930 330, 992 326"/>
+    <path d="M 868 440 L 992 442"/>
+    <path d="M 868 460 C 930 460, 930 552, 992 558"/>
+  </g>
+
+  <!-- ══ Sub-accounts ══ -->
+  <text x="992" y="252" font-family="monospace" font-size="15" fill="#38bdf8" letter-spacing="2">PER-CLIENT SUB-ACCOUNTS</text>
+  <g font-family="Inter, system-ui, sans-serif">
+    <rect x="992" y="276" width="498" height="100" rx="14" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.13"/>
+    <text x="1022" y="316" font-size="20" font-weight="600" fill="#e8f1fb">Sub-account A</text>
+    <text x="1022" y="346" font-family="monospace" font-size="14" fill="#7d8da5">own pipeline &#183; own stages &#183; own agents</text>
+
+    <rect x="992" y="392" width="498" height="100" rx="14" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.13"/>
+    <text x="1022" y="432" font-size="20" font-weight="600" fill="#e8f1fb">Sub-account B</text>
+    <text x="1022" y="462" font-family="monospace" font-size="14" fill="#7d8da5">own pipeline &#183; own stages &#183; own agents</text>
+
+    <rect x="992" y="508" width="498" height="100" rx="14" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.13"/>
+    <text x="1022" y="548" font-size="20" font-weight="600" fill="#e8f1fb">Sub-account C</text>
+    <text x="1022" y="578" font-family="monospace" font-size="14" fill="#7d8da5">own pipeline &#183; own stages &#183; own agents</text>
+  </g>
+
+  <!-- footer strip -->
+  <line x1="110" y1="672" x2="1490" y2="672" stroke="#ffffff" stroke-opacity="0.10" stroke-width="1"/>
+  <text x="110" y="722" font-family="monospace" font-size="15" fill="#38bdf8" letter-spacing="2">WHAT THE ROUTING SOLVES</text>
+  <g font-family="Inter, system-ui, sans-serif" font-size="17" fill="#b9c6da">
+    <circle cx="118" cy="765" r="4" fill="#38bdf8"/><text x="138" y="771">Every lead reaches the right agent&#8217;s pipeline &#8212; no shared inbox triage</text>
+    <circle cx="118" cy="807" r="4" fill="#38bdf8"/><text x="138" y="813">Originating page or ad is attached, so follow-up starts with context</text>
+    <circle cx="118" cy="849" r="4" fill="#38bdf8"/><text x="138" y="855">One agency key serves every client without cross-tenant leakage</text>
+  </g>
+
+  <text x="110" y="932" font-family="monospace" font-size="16" fill="#4d5b73">Integrity Realty PH</text>
+  <text x="1490" y="932" font-family="monospace" font-size="16" fill="#4d5b73" text-anchor="end">system diagram &#8212; not a screenshot</text>
+</svg>
