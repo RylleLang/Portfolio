@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="Odoo ERP module architecture for two client implementations">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a1120"/>
+      <stop offset="1" stop-color="#0d1526"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#6366f1"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#38bdf8" stop-opacity="0.20"/>
+      <stop offset="1" stop-color="#38bdf8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#6366f1" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#38bdf8" opacity="0.75"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <ellipse cx="240" cy="120" rx="520" ry="360" fill="url(#glowA)"/>
+  <ellipse cx="1380" cy="900" rx="520" ry="360" fill="url(#glowB)"/>
+
+  <!-- title -->
+  <text x="110" y="106" font-family="monospace" font-size="26" fill="#7d8da5" letter-spacing="3">ODOO ERP</text>
+  <text x="110" y="152" font-family="Inter, system-ui, sans-serif" font-size="34" font-weight="700" fill="#e8f1fb">Two client implementations</text>
+  <line x1="110" y1="186" x2="1490" y2="186" stroke="#ffffff" stroke-opacity="0.10" stroke-width="1"/>
+
+  <!-- ══ Implementation A — siomai / food ══ -->
+  <g>
+    <rect x="110" y="222" width="10" height="10" rx="2" fill="url(#accent)"/>
+    <text x="138" y="233" font-family="monospace" font-size="21" fill="#38bdf8" letter-spacing="1.5">FOOD MANUFACTURING &amp; RETAIL</text>
+    <text x="138" y="266" font-family="Inter, system-ui, sans-serif" font-size="17" fill="#7d8da5">Siomai business &#8212; production through counter sales</text>
+  </g>
+
+  <g font-family="Inter, system-ui, sans-serif" text-anchor="middle">
+    <!-- chip 1 -->
+    <rect x="110" y="300" width="253" height="120" rx="14" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.13"/>
+    <text x="236" y="352" font-size="22" font-weight="600" fill="#e8f1fb">Purchase</text>
+    <text x="236" y="382" font-size="15" fill="#7d8da5">Vendors, reordering</text>
+    <!-- chip 2 -->
+    <rect x="391" y="300" width="253" height="120" rx="14" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.13"/>
+    <text x="517" y="352" font-size="22" font-weight="600" fill="#e8f1fb">Inventory</text>
+    <text x="517" y="382" font-size="15" fill="#7d8da5">Stock moves</text>
+    <!-- chip 3 -->
+    <rect x="672" y="300" width="253" height="120" rx="14" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.13"/>
+    <text x="798" y="352" font-size="22" font-weight="600" fill="#e8f1fb">Manufacturing</text>
+    <text x="798" y="382" font-size="15" fill="#7d8da5">BoM, production orders</text>
+    <!-- chip 4 -->
+    <rect x="953" y="300" width="253" height="120" rx="14" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.13"/>
+    <text x="1079" y="352" font-size="22" font-weight="600" fill="#e8f1fb">Point of Sale</text>
+    <text x="1079" y="382" font-size="15" fill="#7d8da5">Counter terminals</text>
+    <!-- chip 5 -->
+    <rect x="1234" y="300" width="253" height="120" rx="14" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.13"/>
+    <text x="1360" y="352" font-size="22" font-weight="600" fill="#e8f1fb">Accounting</text>
+    <text x="1360" y="382" font-size="15" fill="#7d8da5">Invoices, bills</text>
+  </g>
+
+  <g stroke="#38bdf8" stroke-opacity="0.55" stroke-width="2" marker-end="url(#arrow)">
+    <line x1="367" y1="360" x2="386" y2="360"/>
+    <line x1="648" y1="360" x2="667" y2="360"/>
+    <line x1="929" y1="360" x2="948" y2="360"/>
+    <line x1="1210" y1="360" x2="1229" y2="360"/>
+  </g>
+
+  <!-- ══ Implementation B — beauty products ══ -->
+  <g>
+    <rect x="110" y="512" width="10" height="10" rx="2" fill="url(#accent)"/>
+    <text x="138" y="523" font-family="monospace" font-size="21" fill="#38bdf8" letter-spacing="1.5">RETAIL &amp; ECOMMERCE</text>
+    <text x="138" y="556" font-family="Inter, system-ui, sans-serif" font-size="17" fill="#7d8da5">Beauty products business &#8212; storefront on shared stock</text>
+  </g>
+
+  <g font-family="Inter, system-ui, sans-serif" text-anchor="middle">
+    <rect x="392" y="590" width="253" height="120" rx="14" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.13"/>
+    <text x="518" y="642" font-size="22" font-weight="600" fill="#e8f1fb">Sales &amp; CRM</text>
+    <text x="518" y="672" font-size="15" fill="#7d8da5">Quotes, pipeline</text>
+
+    <rect x="673" y="590" width="253" height="120" rx="14" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.13"/>
+    <text x="799" y="642" font-size="22" font-weight="600" fill="#e8f1fb">Inventory</text>
+    <text x="799" y="672" font-size="15" fill="#7d8da5">Product variants</text>
+
+    <rect x="954" y="590" width="253" height="120" rx="14" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.13"/>
+    <text x="1080" y="642" font-size="22" font-weight="600" fill="#e8f1fb">eCommerce</text>
+    <text x="1080" y="672" font-size="15" fill="#7d8da5">Website storefront</text>
+  </g>
+
+  <g stroke="#38bdf8" stroke-opacity="0.55" stroke-width="2" marker-end="url(#arrow)">
+    <line x1="649" y1="650" x2="668" y2="650"/>
+    <line x1="930" y1="650" x2="949" y2="650"/>
+  </g>
+
+  <!-- footer -->
+  <line x1="110" y1="800" x2="1490" y2="800" stroke="#ffffff" stroke-opacity="0.10" stroke-width="1"/>
+  <text x="110" y="848" font-family="monospace" font-size="18" fill="#7d8da5">Reference implementation + client deployment &#183; QA &#183; end-user manuals</text>
+  <text x="110" y="890" font-family="monospace" font-size="18" fill="#4d5b73">Bathala Solutions Inc. &#183; 2024&#8211;2025</text>
+  <text x="1490" y="890" font-family="monospace" font-size="16" fill="#4d5b73" text-anchor="end">module architecture &#8212; not a screenshot</text>
+</svg>
