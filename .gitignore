@@ -1,0 +1,11 @@
+# local tooling config — not part of the site
+.claude/
+
+# OS / editor cruft
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/
+
+# nothing here is built — this is a plain static site
