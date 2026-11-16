@@ -178,7 +178,7 @@
         <article class="exp-card">
           <div class="exp__top">
             <h3 class="exp__role">I.T. Intern <span class="at">@</span> <span class="accent">Integrity Realty PH</span></h3>
-            <span class="exp__date mono">Feb 2026 &mdash; Present</span>
+            <span class="exp__date mono">Feb 2026 &mdash; Sept 2026</span>
           </div>
           <p class="exp__meta mono">Project-Based</p>
 
@@ -230,7 +230,7 @@
         <article class="exp-card">
           <div class="exp__top">
             <h3 class="exp__role">Associate Systems Developer <span class="at">@</span> <span class="accent">Bathala Solutions Inc.</span></h3>
-            <span class="exp__date mono">Nov 2024 &mdash; 2025</span>
+            <span class="exp__date mono">Nov 2024 &mdash; Jan 2025</span>
           </div>
           <p class="exp__meta mono">Consultancy &middot; Odoo ERP</p>
 
@@ -275,8 +275,46 @@
 
         <!-- ── Project 1 ── -->
         <article class="card">
-          <img src="assets/projects/philprop.jpg" alt="Philippine Properties homepage with property search"
-               width="1600" height="1000" loading="lazy" />
+          <div class="project-gallery" data-gallery role="group" aria-roledescription="carousel"
+               aria-label="Philippine Properties website screenshots">
+            <div class="project-gallery__stage">
+              <figure class="project-gallery__slide is-active" data-gallery-slide
+                      aria-roledescription="slide" aria-label="1 of 2">
+                <img src="assets/projects/philprop.png"
+                     alt="Philippine Properties homepage with property search"
+                     width="1600" height="1000" loading="lazy" />
+                <figcaption class="project-gallery__caption">Homepage</figcaption>
+              </figure>
+              <figure class="project-gallery__slide" data-gallery-slide
+                      aria-roledescription="slide" aria-label="2 of 2" aria-hidden="true">
+                <img src="assets/projects/philprop-listings.png"
+                     alt="Philippine Properties search results with active property listings and filters"
+                     width="1600" height="1000" loading="lazy" />
+                <figcaption class="project-gallery__caption">Property listings</figcaption>
+              </figure>
+            </div>
+            <button class="project-gallery__nav project-gallery__nav--prev" type="button"
+                    data-gallery-prev aria-label="Previous screenshot">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6" /></svg>
+            </button>
+            <button class="project-gallery__nav project-gallery__nav--next" type="button"
+                    data-gallery-next aria-label="Next screenshot">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
+            </button>
+            <div class="project-gallery__controls">
+              <div class="project-gallery__dots" aria-label="Choose a screenshot">
+                <button class="project-gallery__dot is-active" type="button" data-gallery-target="0"
+                        aria-label="Show homepage screenshot" aria-current="true"></button>
+                <button class="project-gallery__dot" type="button" data-gallery-target="1"
+                        aria-label="Show property listings screenshot"></button>
+              </div>
+              <button class="project-gallery__play" type="button" data-gallery-toggle
+                      aria-label="Pause slideshow" aria-pressed="false">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5h3v14H8zM15 5h3v14h-3z" /></svg>
+              </button>
+            </div>
+            <span class="sr-only" data-gallery-status aria-live="off"></span>
+          </div>
 
           <div class="card__body">
             <div class="card__topline">
@@ -287,7 +325,7 @@
               <span class="card__date mono">Feb 2025 &ndash; Sept 2025</span>
             </div>
 
-            <h3 class="card__title">PhilProp <span class="dim">/ IntegrityAI</span></h3>
+            <h3 class="card__title">Philippine Properties</h3>
             <p class="card__sub mono">Full-Stack Real Estate Listing Platform</p>
 
             <ul class="bullets">
@@ -317,7 +355,7 @@
             </ul>
 
             <a class="card__link mono" href="https://philippineproperties.ph/" target="_blank" rel="noopener noreferrer">
-              Visit Live Site <span aria-hidden="true">↗</span>
+              Visit PhilippineProperties.ph <span aria-hidden="true">↗</span>
             </a>
           </div>
         </article>
@@ -538,7 +576,7 @@
                 <li>GoHighLevel</li><li>CRM</li><li>Marketing Automation</li>
                 <li>Webhooks</li><li>n8n</li>
               </ul>
-              <span class="card__date mono">Nov 2024 &ndash; Jan 2025</span>
+              <span class="card__date mono">Feb 2025 &ndash; Sept 2025</span>
             </div>
 
             <h3 class="card__title">Integrity Realty CRM</h3>

@@ -143,4 +143,143 @@
   /* ── footer year ─────────────────────────────────────── */
   var year = document.getElementById("year");
   if (year) year.textContent = String(new Date().getFullYear());
+
+  /* ── project screenshot galleries ───────────────────── */
+  var galleries = document.querySelectorAll("[data-gallery]");
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  Array.prototype.forEach.call(galleries, function (gallery) {
+    var slides = Array.prototype.slice.call(
+      gallery.querySelectorAll("[data-gallery-slide]")
+    );
+    var dots = Array.prototype.slice.call(
+      gallery.querySelectorAll("[data-gallery-target]")
+    );
+    var previous = gallery.querySelector("[data-gallery-prev]");
+    var next = gallery.querySelector("[data-gallery-next]");
+    var toggle = gallery.querySelector("[data-gallery-toggle]");
+    var status = gallery.querySelector("[data-gallery-status]");
+
+    if (slides.length < 2 || dots.length !== slides.length || !previous || !next || !toggle) {
+      return;
+    }
+
+    var activeIndex = 0;
+    var isPlaying = !reduceMotion;
+    var isHovered = false;
+    var isFocused = false;
+    var isVisible = !("IntersectionObserver" in window);
+    var timer;
+
+    slides.forEach(function (slide, i) {
+      if (i > 0) {
+        slide.querySelector("img").loading = "eager";
+      }
+    });
+
+    function showSlide(index, announce) {
+      activeIndex = (index + slides.length) % slides.length;
+
+      slides.forEach(function (slide, i) {
+        var active = i === activeIndex;
+        slide.classList.toggle("is-active", active);
+        slide.setAttribute("aria-hidden", String(!active));
+      });
+
+      dots.forEach(function (dot, i) {
+        var active = i === activeIndex;
+        dot.classList.toggle("is-active", active);
+        if (active) {
+          dot.setAttribute("aria-current", "true");
+        } else {
+          dot.removeAttribute("aria-current");
+        }
+      });
+
+      if (announce && status) {
+        status.textContent = slides[activeIndex].querySelector("img").alt;
+        status.setAttribute("aria-live", "polite");
+      } else if (status) {
+        status.setAttribute("aria-live", "off");
+      }
+    }
+
+    function stopTimer() {
+      window.clearInterval(timer);
+      timer = null;
+    }
+
+    function startTimer() {
+      stopTimer();
+      if (!isPlaying || !isVisible || isHovered || isFocused || document.hidden) return;
+      timer = window.setInterval(function () {
+        showSlide(activeIndex + 1, false);
+      }, 5000);
+    }
+
+    function updateToggle() {
+      var path = toggle.querySelector("path");
+      toggle.setAttribute("aria-label", isPlaying ? "Pause slideshow" : "Play slideshow");
+      toggle.setAttribute("aria-pressed", String(!isPlaying));
+      path.setAttribute(
+        "d",
+        isPlaying ? "M8 5h3v14H8zM15 5h3v14h-3z" : "m8 5 11 7-11 7z"
+      );
+      path.setAttribute("fill", isPlaying ? "none" : "currentColor");
+      startTimer();
+    }
+
+    previous.addEventListener("click", function () {
+      showSlide(activeIndex - 1, true);
+      startTimer();
+    });
+    next.addEventListener("click", function () {
+      showSlide(activeIndex + 1, true);
+      startTimer();
+    });
+    dots.forEach(function (dot, i) {
+      dot.addEventListener("click", function () {
+        showSlide(i, true);
+        startTimer();
+      });
+    });
+    toggle.addEventListener("click", function () {
+      isPlaying = !isPlaying;
+      updateToggle();
+    });
+    gallery.addEventListener("mouseenter", function () {
+      isHovered = true;
+      stopTimer();
+    });
+    gallery.addEventListener("mouseleave", function () {
+      isHovered = false;
+      startTimer();
+    });
+    gallery.addEventListener("focusin", function () {
+      isFocused = true;
+      stopTimer();
+    });
+    gallery.addEventListener("focusout", function (event) {
+      if (gallery.contains(event.relatedTarget)) return;
+      isFocused = false;
+      startTimer();
+    });
+    document.addEventListener("visibilitychange", startTimer);
+
+    if ("IntersectionObserver" in window) {
+      var galleryObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          isVisible = entry.isIntersecting;
+          if (isVisible) {
+            startTimer();
+          } else {
+            stopTimer();
+          }
+        });
+      });
+      galleryObserver.observe(gallery);
+    }
+
+    updateToggle();
+  });
 })();

@@ -30,11 +30,13 @@ experience.jpg
 
 ── PROJECT SCREENSHOTS → put these in assets/projects/ ──
 
-Shape for all three: WIDE (16:10). Suggested 1600 x 1000 px.
+Shape: WIDE (16:10). Suggested 1600 x 1000 px.
 Format: .png, .jpg, or .mp4 screen recording (mp4 also works).
 
 projects/philprop.png
-  The PhilProp site — homepage or a property listing page.
+projects/philprop-listings.png
+  Philippine Properties homepage and search results — shown in an
+  auto-playing, keyboard-accessible screenshot slideshow.
 
 projects/lutong-bahay.png
   The Streamlit app — ideally the detection results screen
