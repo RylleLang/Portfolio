@@ -610,6 +610,68 @@ strong { color: var(--text-bright); font-weight: 600; }
 }
 .card__body { padding: 26px 28px 30px; display: flex; flex-direction: column; flex: 1; }
 
+.case-study {
+  margin-top: 2px;
+  border-top: 1px solid var(--glass-line);
+  border-bottom: 1px solid var(--glass-line);
+}
+.case-study > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 15px 0;
+  color: var(--text-bright);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+}
+.case-study > summary::-webkit-details-marker { display: none; }
+.case-study > summary::after {
+  content: "+";
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 1.2rem;
+  line-height: 1;
+}
+.case-study[open] > summary::after { content: "\2212"; }
+.case-study > summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+.case-study__hint {
+  margin-left: auto;
+  color: var(--text-muted);
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  font-weight: 400;
+}
+.case-study__facts {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  padding: 0 0 18px;
+}
+.case-study__facts > div {
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1fr);
+  gap: 12px;
+}
+.case-study__facts dt {
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  padding-top: 2px;
+}
+.case-study__facts dd {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.86rem;
+  line-height: 1.65;
+}
+
 .card__topline {
   display: flex;
   flex-wrap: wrap;
@@ -643,10 +705,15 @@ strong { color: var(--text-bright); font-weight: 600; }
 .card .bullets li { font-size: 0.94rem; line-height: 1.65; }
 
 .card__link {
-  margin-top: auto;
-  padding-top: 18px;
   font-size: 0.88rem;
   align-self: flex-start;
+}
+.card__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+  margin-top: auto;
+  padding-top: 18px;
 }
 .card__link:hover { color: var(--text-bright); }
 
@@ -819,6 +886,8 @@ strong { color: var(--text-bright); font-weight: 600; }
   .project-gallery__controls { right: 12px; bottom: 12px; gap: 7px; }
   .project-gallery__nav--prev { left: 10px; }
   .project-gallery__nav--next { right: 10px; }
+  .case-study__hint { font-size: 0.62rem; }
+  .case-study__facts > div { grid-template-columns: 1fr; gap: 4px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

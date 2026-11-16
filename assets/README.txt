@@ -31,7 +31,7 @@ experience.jpg
 ── PROJECT SCREENSHOTS → put these in assets/projects/ ──
 
 Shape: WIDE (16:10). Suggested 1600 x 1000 px.
-Format: .png, .jpg, or .mp4 screen recording (mp4 also works).
+Format: .png or .jpg.
 
 projects/philprop.png
 projects/philprop-listings.png
@@ -45,6 +45,16 @@ projects/lutong-bahay.png
 projects/messenger-ai.png
   The n8n workflow canvas, or a real Messenger conversation
   with the bot.
+
+── OPTIONAL PROJECT DEMOS ──────────────────────────────
+
+No screen-recorded demos are included yet. Once you have a short
+MP4 recording, share it so the matching project card can be wired
+to a player with controls and a screenshot poster.
+
+Do not publish raw n8n workflow exports. Review and remove credentials,
+webhook URLs, client data, phone numbers, and other private information
+before sharing any workflow material.
 
 ── TIPS ────────────────────────────────────────────────
 

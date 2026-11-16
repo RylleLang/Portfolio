@@ -10,7 +10,7 @@ Plain HTML, CSS, and JavaScript. No build step, no dependencies, no framework.
 ```
 index.html          all page content
 css/styles.css      all styling (theme tokens in the :root block at the top)
-js/main.js          nav, mobile menu, scroll reveal, active-link highlighting
+js/main.js          nav, mobile menu, scroll reveal, project slideshow, active-link highlighting
 assets/             images, resume, and the IEEE paper
 tools/              helper script for cropping images to the sizes the page needs
 ```

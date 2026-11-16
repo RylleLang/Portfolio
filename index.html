@@ -328,35 +328,29 @@
             <h3 class="card__title">Philippine Properties</h3>
             <p class="card__sub mono">Full-Stack Real Estate Listing Platform</p>
 
-            <ul class="bullets">
-              <li>
-                Built a Lamudi-style property marketplace for the Philippine market using
-                Astro 6 with server-side rendering, deployed to Cloudflare Pages and backed
-                by Supabase auth and PostgreSQL.
-              </li>
-              <li>
-                Implemented role-based access for buyers, agents, and admins — including
-                agent verification with private government-ID and PRC-license uploads stored
-                in Cloudflare R2.
-              </li>
-              <li>
-                Engineered the media pipeline on Cloudflare Images with responsive variants,
-                plus row-level-security-aware API endpoints for privileged admin operations.
-              </li>
-              <li>
-                Integrated GoHighLevel CRM so every property inquiry syncs to the correct
-                agency sub-account, pipeline, and stage automatically.
-              </li>
-              <li>
-                Wrote a schema-verification tool that validates every database query against
-                a live schema snapshot before deploy, eliminating a recurring class of
-                production outage.
-              </li>
-            </ul>
+            <details class="case-study">
+              <summary>Read case study <span class="case-study__hint">Problem · Build · Outcome</span></summary>
+              <dl class="case-study__facts">
+                <div>
+                  <dt>Problem</dt>
+                  <dd>Property buyers and agents needed a searchable Philippine listings marketplace with dependable listing and inquiry workflows.</dd>
+                </div>
+                <div>
+                  <dt>Build</dt>
+                  <dd>Built an Astro SSR platform with buyer, agent, and admin roles; property search; agent microsites; saved listings and alerts; verification; and GoHighLevel lead sync.</dd>
+                </div>
+                <div>
+                  <dt>Outcome</dt>
+                  <dd>Delivered a live marketplace covering the listing lifecycle, with property inquiries routed into the appropriate agency CRM pipeline.</dd>
+                </div>
+              </dl>
+            </details>
 
-            <a class="card__link mono" href="https://philippineproperties.ph/" target="_blank" rel="noopener noreferrer">
-              Visit PhilippineProperties.ph <span aria-hidden="true">↗</span>
-            </a>
+            <div class="card__links">
+              <a class="card__link mono" href="https://philippineproperties.ph/" target="_blank" rel="noopener noreferrer">
+                Visit PhilippineProperties.ph <span aria-hidden="true">↗</span>
+              </a>
+            </div>
           </div>
         </article>
 
@@ -378,36 +372,32 @@
             <h3 class="card__title">Lutong Bahay</h3>
             <p class="card__sub mono">Ingredient Detection &amp; Recipe Recommendation — IEEE Paper</p>
 
-            <ul class="bullets">
-              <li>
-                Built a web application that detects food ingredients from an uploaded photo
-                and recommends recipes from what the user already has at home — aimed at
-                reducing household food waste.
-              </li>
-              <li>
-                Trained a <strong>YOLOv8</strong> object detection model on a custom dataset
-                of 76 common ingredients, using data augmentation and hyperparameter tuning,
-                optimized to train on CPU without GPU acceleration.
-              </li>
-              <li>
-                Designed a recipe-matching engine over a Filipino and international recipe
-                database that ranks suggestions by matched-ingredient count and surfaces
-                instructions, nutrition facts, estimated cost, and the cost of missing items.
-              </li>
-              <li>
-                Achieved <strong>0.91 mAP@0.5</strong> on ingredient detection across 100
-                held-out test images, with recipe recommendations rated relevant in
-                <strong>93 of 100</strong> cases by an independent user panel.
-              </li>
-              <li>
-                Delivered the interface in Streamlit with custom CSS, colour-coded matched
-                and missing ingredients, and explicit feedback when no recipe matches.
-              </li>
-            </ul>
+            <details class="case-study">
+              <summary>Read case study <span class="case-study__hint">Problem · Build · Outcome</span></summary>
+              <dl class="case-study__facts">
+                <div>
+                  <dt>Problem</dt>
+                  <dd>People often have ingredients at home but need help identifying them and finding recipes that use what they already have.</dd>
+                </div>
+                <div>
+                  <dt>Build</dt>
+                  <dd>Built a Streamlit app around a YOLOv8 model trained on 76 ingredient classes, with recipe matching, nutrition and cost details, and clear matched/missing ingredient feedback.</dd>
+                </div>
+                <div>
+                  <dt>Outcome</dt>
+                  <dd>Recorded 0.91 mAP@0.5 across 100 held-out test images; an independent panel marked recommendations relevant in 93 of 100 evaluations.</dd>
+                </div>
+              </dl>
+            </details>
 
-            <a class="card__link mono" href="assets/lutong-bahay-paper.pdf" target="_blank" rel="noopener">
-              Read Paper (PDF) <span aria-hidden="true">→</span>
-            </a>
+            <div class="card__links">
+              <a class="card__link mono" href="assets/lutong-bahay-paper.pdf" target="_blank" rel="noopener">
+                Read Paper (PDF) <span aria-hidden="true">→</span>
+              </a>
+              <a class="card__link mono" href="https://github.com/RylleLang/ingredient-recipe-app" target="_blank" rel="noopener noreferrer">
+                View Source <span aria-hidden="true">↗</span>
+              </a>
+            </div>
           </div>
         </article>
 
@@ -429,34 +419,23 @@
             <h3 class="card__title">Messenger AI Agent</h3>
             <p class="card__sub mono">Multi-Page Facebook Chatbot &amp; CRM Automation</p>
 
-            <ul class="bullets">
-              <li>
-                Built a production Facebook Messenger AI agent in <strong>n8n</strong> that
-                handles inbound property inquiries for the company's pages, with webhook
-                verification, multi-page routing, and per-page access tokens.
-              </li>
-              <li>
-                Runs two distinct personas from one workflow — a customer-facing broker that
-                qualifies buyers and sellers, and an internal agent mode that queries the
-                property database and generates full payment schedules with discount and
-                closing-fee computations.
-              </li>
-              <li>
-                Gave the agent live SQL access over a PostgreSQL property database spanning
-                scraped market data and developer inventories, with strict query guardrails
-                to keep generated SQL safe and performant.
-              </li>
-              <li>
-                Persisted conversation state per sender using Postgres-backed chat memory,
-                and handled Facebook ad-referral context so the greeting adapts to whichever
-                ad the user came from.
-              </li>
-              <li>
-                Pushed qualified leads into <strong>GoHighLevel</strong> via webhook,
-                capturing contact details and originating page so agents get an actionable
-                CRM record instead of a raw chat log.
-              </li>
-            </ul>
+            <details class="case-study">
+              <summary>Read case study <span class="case-study__hint">Problem · Build · Outcome</span></summary>
+              <dl class="case-study__facts">
+                <div>
+                  <dt>Problem</dt>
+                  <dd>Property teams needed a consistent way to handle buyer and seller questions across multiple Facebook pages and preserve each conversation's context.</dd>
+                </div>
+                <div>
+                  <dt>Build</dt>
+                  <dd>Connected Messenger webhooks to an n8n agent with separate customer and internal modes, guarded property-data queries, persistent chat memory, and GoHighLevel handoff.</dd>
+                </div>
+                <div>
+                  <dt>Outcome</dt>
+                  <dd>Qualified conversations can carry their originating page and contact context into CRM, while the internal mode can look up listings and prepare payment estimates.</dd>
+                </div>
+              </dl>
+            </details>
           </div>
         </article>
 
@@ -479,33 +458,23 @@
             <h3 class="card__title">Odoo ERP Implementations</h3>
             <p class="card__sub mono">Business Systems &mdash; Bathala Solutions Inc.</p>
 
-            <ul class="bullets">
-              <li>
-                Built Odoo ERP systems for two live businesses, modelled on real operations
-                so they could double as the reference implementation behind the company's
-                client product offerings.
-              </li>
-              <li>
-                <strong>Food manufacturing &amp; retail (siomai):</strong> configured the full
-                production-to-counter chain &mdash; Purchase and vendor reordering, Inventory
-                stock moves, Manufacturing with Bills of Materials and production orders,
-                Point of Sale terminals, and Invoicing.
-              </li>
-              <li>
-                <strong>Beauty products retail:</strong> set up Sales and CRM for quotations
-                and pipeline, Inventory with product variants, and a Website/eCommerce
-                storefront running against the same stock.
-              </li>
-              <li>
-                Ran continuous quality assurance across modules to catch regressions before
-                they reached clients, and supported deployments alongside client management
-                and administrative teams.
-              </li>
-              <li>
-                Wrote end-user manuals tailored to each client's own workflows so
-                non-technical staff could operate the system unaided.
-              </li>
-            </ul>
+            <details class="case-study">
+              <summary>Read case study <span class="case-study__hint">Problem · Build · Outcome</span></summary>
+              <dl class="case-study__facts">
+                <div>
+                  <dt>Problem</dt>
+                  <dd>Two businesses needed ERP workflows that fit their day-to-day operations rather than disconnected tools and manual handoffs.</dd>
+                </div>
+                <div>
+                  <dt>Build</dt>
+                  <dd>Configured Odoo purchasing, inventory, manufacturing, POS, and invoicing for a food manufacturer; set up sales, CRM, inventory, and eCommerce for a beauty retailer.</dd>
+                </div>
+                <div>
+                  <dt>Outcome</dt>
+                  <dd>Delivered two working reference implementations, supported deployment and QA, and wrote workflow-specific guides for non-technical users.</dd>
+                </div>
+              </dl>
+            </details>
           </div>
         </article>
 
@@ -527,38 +496,29 @@
             <h3 class="card__title">AquaPeelter</h3>
             <p class="card__sub mono">IoT Laundry Wastewater Filtration &amp; Monitoring System</p>
 
-            <ul class="bullets">
-              <li>
-                Built an end-to-end IoT system that filters laundry wastewater and grades it
-                for safe reuse &mdash; <strong>ESP32 sensors</strong> through a REST API to a
-                mobile app, hardware to interface.
-              </li>
-              <li>
-                Wrote ESP32 firmware that samples pH, turbidity (NTU), and TDS (ppm) at both
-                pre- and post-filter taps, then <strong>signs each telemetry payload with
-                HMAC-SHA256</strong> so the API can reject spoofed device data.
-              </li>
-              <li>
-                Built a Node/Express API with JWT authentication, per-route rate limiting,
-                payload validation, and Winston logging, backed by MongoDB with compound
-                indexes for time-range queries and a 90-day TTL to cap storage growth.
-              </li>
-              <li>
-                Modelled discrete filtration cycles so pre- and post-filter readings are
-                compared per run, and classified output water as <strong>safe, reusable, or
-                unsafe</strong> against WHO and EPA thresholds.
-              </li>
-              <li>
-                Tracked <strong>banana-peel bio-filter</strong> health as an adsorbent medium,
-                logging remaining capacity, filtration cycles run, and repair or replacement
-                history so the unit is serviced before performance drops.
-              </li>
-              <li>
-                Shipped a React Native (Expo) app with a live dashboard, time-series charts,
-                alerts, and a maintenance log &mdash; using secure token storage and Expo push
-                notifications for out-of-range readings and device-offline detection.
-              </li>
-            </ul>
+            <details class="case-study">
+              <summary>Read case study <span class="case-study__hint">Problem · Build · Outcome</span></summary>
+              <dl class="case-study__facts">
+                <div>
+                  <dt>Problem</dt>
+                  <dd>A laundry-water filtration prototype needed a way to monitor water quality across filter cycles and track filter maintenance.</dd>
+                </div>
+                <div>
+                  <dt>Build</dt>
+                  <dd>Connected ESP32 pH, turbidity, and TDS sensors to a signed-telemetry API, MongoDB cycle records, and an Expo app with charts, alerts, and maintenance history.</dd>
+                </div>
+                <div>
+                  <dt>Outcome</dt>
+                  <dd>Provides per-cycle readings and classifications against reference thresholds, with device alerts and bio-filter service history; no water-safety performance claim is implied.</dd>
+                </div>
+              </dl>
+            </details>
+
+            <div class="card__links">
+              <a class="card__link mono" href="https://github.com/RylleLang/AquaPeelter" target="_blank" rel="noopener noreferrer">
+                View Source <span aria-hidden="true">↗</span>
+              </a>
+            </div>
           </div>
         </article>
 
@@ -582,27 +542,23 @@
             <h3 class="card__title">Integrity Realty CRM</h3>
             <p class="card__sub mono">Multi-Tenant GoHighLevel Build &amp; Automation</p>
 
-            <ul class="bullets">
-              <li>
-                Built and own the company's entire <strong>GoHighLevel</strong> CRM &mdash;
-                a multi-tenant setup where one agency key writes into per-client sub-accounts,
-                each with its own pipelines and stages.
-              </li>
-              <li>
-                Wired inbound property inquiries from Facebook Messenger, the website chatbot,
-                and web forms into the CRM by webhook, so every lead lands in the correct
-                agent's pipeline automatically instead of in a shared inbox.
-              </li>
-              <li>
-                Captured lead context on entry &mdash; contact details plus the originating
-                page or ad &mdash; giving agents an actionable record rather than a raw chat
-                transcript.
-              </li>
-              <li>
-                Connected the CRM to the <strong>n8n</strong> AI agent stack so qualified
-                conversations become opportunities without manual re-entry.
-              </li>
-            </ul>
+            <details class="case-study">
+              <summary>Read case study <span class="case-study__hint">Problem · Build · Outcome</span></summary>
+              <dl class="case-study__facts">
+                <div>
+                  <dt>Problem</dt>
+                  <dd>Property inquiries from chat, web forms, and ads needed to reach the right agents without losing the source and contact context.</dd>
+                </div>
+                <div>
+                  <dt>Build</dt>
+                  <dd>Configured a multi-tenant GoHighLevel setup with per-client sub-accounts and pipelines, webhook intake, and n8n qualification handoff.</dd>
+                </div>
+                <div>
+                  <dt>Outcome</dt>
+                  <dd>Routes inquiries into the appropriate agent pipeline with actionable contact and source context instead of leaving them in a shared inbox.</dd>
+                </div>
+              </dl>
+            </details>
           </div>
         </article>
 
