@@ -24,11 +24,10 @@ python -m http.server 8000
 # then visit http://localhost:8000
 ```
 
-## Outstanding
+## Resume
 
-**`assets/resume.pdf` is missing.** The `Resume` button in the nav links to it, so that
-link 404s until you drop your CV in with exactly that filename. Everything else on the
-page is wired up and rendering.
+`assets/resume.pdf` is the current public CV, linked from the desktop and mobile
+navigation. Review it before replacing it and keep the filename `resume.pdf`.
 
 ## Adding or replacing images
 
@@ -51,6 +50,10 @@ phone cameras, and writes straight into `assets/`.
 | `-Quality` | JPEG quality, 50–100. Default 88. Ignored for PNG. |
 
 Use `-Anchor Top` if a head gets cropped off. Re-run as often as you like; it overwrites.
+
+The Philippine Properties card includes homepage and listings screenshots plus a
+user-controlled screen-recorded demo. The video is compressed MP4 and does not
+autoplay. Project write-ups use expandable case studies; add only verified results.
 
 ## Theming
 

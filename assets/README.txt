@@ -6,15 +6,11 @@ then tell Claude and the placeholder boxes get swapped for real images.
 
 ┌─ DONE ─────────────────────────────────────────────────┐
 │ 1x1_pogi.jpg            Hero photo. Wired up.          │
+│ resume.pdf              Current CV. Linked in nav.     │
 │ lutong-bahay-paper.pdf  IEEE paper. Button works.      │
 └────────────────────────────────────────────────────────┘
 
 ── STILL NEEDED ────────────────────────────────────────
-
-resume.pdf
-  Your CV. Linked by the "Resume" button in the nav bar.
-  Format: PDF. Any size. Just drop it in — no renaming
-  needed beyond calling it exactly resume.pdf
 
 about.jpg
   Photo of you for the About Me section — you at work, at a
@@ -35,8 +31,12 @@ Format: .png or .jpg.
 
 projects/philprop.png
 projects/philprop-listings.png
-  Philippine Properties homepage and search results — shown in an
-  auto-playing, keyboard-accessible screenshot slideshow.
+  Philippine Properties homepage and search results — shown in a
+  keyboard-accessible screenshot slideshow.
+
+projects/philprop-demo.mp4
+  Compressed screen-recorded walkthrough. Plays only when a visitor
+  selects the demo slide and presses play.
 
 projects/lutong-bahay.png
   The Streamlit app — ideally the detection results screen
@@ -46,11 +46,10 @@ projects/messenger-ai.png
   The n8n workflow canvas, or a real Messenger conversation
   with the bot.
 
-── OPTIONAL PROJECT DEMOS ──────────────────────────────
+── PROJECT DEMOS ───────────────────────────────────────
 
-No screen-recorded demos are included yet. Once you have a short
-MP4 recording, share it so the matching project card can be wired
-to a player with controls and a screenshot poster.
+The Philippine Properties demo is an MP4 with native playback controls
+and a screenshot poster. Keep future demos short and compress them for web.
 
 Do not publish raw n8n workflow exports. Review and remove credentials,
 webhook URLs, client data, phone numbers, and other private information

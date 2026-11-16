@@ -42,7 +42,6 @@
         <a href="#projects">Projects</a>
         <a href="#trainings">Trainings</a>
         <a href="#contact">Contact</a>
-        <!-- PLACEHOLDER: drop your CV at assets/resume.pdf -->
         <a class="btn btn--ghost btn--sm" href="assets/resume.pdf" target="_blank" rel="noopener">Resume</a>
       </nav>
 
@@ -270,27 +269,40 @@
     <!-- ═══════════════════════════ PROJECTS ═══════════════════════════ -->
     <section class="section container" id="projects">
       <h2 class="section__head"><span class="section__num mono">03.</span> Projects</h2>
+      <p class="projects__intro">Selected work across product engineering, applied AI, and automation. Open a case study for the challenge, my contribution, and the outcome.</p>
 
-      <div class="projects">
+      <p class="projects__label mono">Featured projects</p>
+      <div class="projects projects--featured">
 
         <!-- ── Project 1 ── -->
         <article class="card">
           <div class="project-gallery" data-gallery role="group" aria-roledescription="carousel"
-               aria-label="Philippine Properties website screenshots">
+               aria-label="Philippine Properties screenshots and product demo">
             <div class="project-gallery__stage">
               <figure class="project-gallery__slide is-active" data-gallery-slide
-                      aria-roledescription="slide" aria-label="1 of 2">
+                      aria-roledescription="slide" aria-label="1 of 3">
                 <img src="assets/projects/philprop.png"
                      alt="Philippine Properties homepage with property search"
                      width="1600" height="1000" loading="lazy" />
                 <figcaption class="project-gallery__caption">Homepage</figcaption>
               </figure>
               <figure class="project-gallery__slide" data-gallery-slide
-                      aria-roledescription="slide" aria-label="2 of 2" aria-hidden="true">
+                      aria-roledescription="slide" aria-label="2 of 3" aria-hidden="true">
                 <img src="assets/projects/philprop-listings.png"
                      alt="Philippine Properties search results with active property listings and filters"
                      width="1600" height="1000" loading="lazy" />
                 <figcaption class="project-gallery__caption">Property listings</figcaption>
+              </figure>
+              <figure class="project-gallery__slide project-gallery__slide--video"
+                      data-gallery-slide aria-roledescription="slide" aria-label="3 of 3"
+                      aria-hidden="true">
+                <video controls preload="metadata" playsinline
+                       poster="assets/projects/philprop.png"
+                       aria-label="Screen-recorded walkthrough of the Philippine Properties website">
+                  <source src="assets/projects/philprop-demo.mp4" type="video/mp4" />
+                  Your browser does not support embedded video.
+                </video>
+                <figcaption class="project-gallery__caption">Product walkthrough</figcaption>
               </figure>
             </div>
             <button class="project-gallery__nav project-gallery__nav--prev" type="button"
@@ -302,11 +314,13 @@
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
             </button>
             <div class="project-gallery__controls">
-              <div class="project-gallery__dots" aria-label="Choose a screenshot">
+              <div class="project-gallery__dots" aria-label="Choose a slide">
                 <button class="project-gallery__dot is-active" type="button" data-gallery-target="0"
                         aria-label="Show homepage screenshot" aria-current="true"></button>
                 <button class="project-gallery__dot" type="button" data-gallery-target="1"
                         aria-label="Show property listings screenshot"></button>
+                <button class="project-gallery__dot" type="button" data-gallery-target="2"
+                        aria-label="Show product walkthrough video"></button>
               </div>
               <button class="project-gallery__play" type="button" data-gallery-toggle
                       aria-label="Pause slideshow" aria-pressed="false">
@@ -342,6 +356,10 @@
                 <div>
                   <dt>Outcome</dt>
                   <dd>Delivered a live marketplace covering the listing lifecycle, with property inquiries routed into the appropriate agency CRM pipeline.</dd>
+                </div>
+                <div>
+                  <dt>My contribution</dt>
+                  <dd>Built the full-stack listing platform, property search, user roles, and listing workflows; integrated Supabase, Cloudflare media, and GoHighLevel.</dd>
                 </div>
               </dl>
             </details>
@@ -387,8 +405,17 @@
                   <dt>Outcome</dt>
                   <dd>Recorded 0.91 mAP@0.5 across 100 held-out test images; an independent panel marked recommendations relevant in 93 of 100 evaluations.</dd>
                 </div>
+                <div>
+                  <dt>My contribution</dt>
+                  <dd>Trained and evaluated the YOLOv8 ingredient model, built recipe-matching logic and the Streamlit app, and presented the research results.</dd>
+                </div>
               </dl>
             </details>
+
+            <ul class="project-stats" aria-label="Model and recommendation evaluation results">
+              <li><strong>0.91</strong><span>mAP@0.5</span></li>
+              <li><strong>93/100</strong><span>recommendations rated relevant</span></li>
+            </ul>
 
             <div class="card__links">
               <a class="card__link mono" href="assets/lutong-bahay-paper.pdf" target="_blank" rel="noopener">
@@ -434,10 +461,19 @@
                   <dt>Outcome</dt>
                   <dd>Qualified conversations can carry their originating page and contact context into CRM, while the internal mode can look up listings and prepare payment estimates.</dd>
                 </div>
+                <div>
+                  <dt>My contribution</dt>
+                  <dd>Designed the n8n AI agent and conversation routing; integrated guarded property-data queries, persistent memory, and GoHighLevel inquiry handoff.</dd>
+                </div>
               </dl>
             </details>
           </div>
         </article>
+
+      </div>
+
+      <p class="projects__label mono">More projects</p>
+      <div class="projects projects--more">
 
         <!-- ── Project 4 ── -->
         <article class="card">
@@ -472,6 +508,10 @@
                 <div>
                   <dt>Outcome</dt>
                   <dd>Delivered two working reference implementations, supported deployment and QA, and wrote workflow-specific guides for non-technical users.</dd>
+                </div>
+                <div>
+                  <dt>My contribution</dt>
+                  <dd>Configured purchasing, inventory, manufacturing, POS, and invoicing for the food business; supported QA, deployment, and user documentation.</dd>
                 </div>
               </dl>
             </details>
@@ -510,6 +550,10 @@
                 <div>
                   <dt>Outcome</dt>
                   <dd>Provides per-cycle readings and classifications against reference thresholds, with device alerts and bio-filter service history; no water-safety performance claim is implied.</dd>
+                </div>
+                <div>
+                  <dt>My contribution</dt>
+                  <dd>Built ESP32 firmware and sensor telemetry, the Node/Express API and MongoDB layer, and the Expo dashboard, alerts, and maintenance features.</dd>
                 </div>
               </dl>
             </details>
@@ -556,6 +600,10 @@
                 <div>
                   <dt>Outcome</dt>
                   <dd>Routes inquiries into the appropriate agent pipeline with actionable contact and source context instead of leaving them in a shared inbox.</dd>
+                </div>
+                <div>
+                  <dt>My contribution</dt>
+                  <dd>Configured the multi-tenant GoHighLevel CRM, automated chat and form lead routing, and connected n8n AI qualification to CRM opportunities.</dd>
                 </div>
               </dl>
             </details>

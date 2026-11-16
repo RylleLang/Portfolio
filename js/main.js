@@ -172,9 +172,8 @@
     var timer;
 
     slides.forEach(function (slide, i) {
-      if (i > 0) {
-        slide.querySelector("img").loading = "eager";
-      }
+      var image = slide.querySelector("img");
+      if (i > 0 && image) image.loading = "eager";
     });
 
     function showSlide(index, announce) {
@@ -182,6 +181,8 @@
 
       slides.forEach(function (slide, i) {
         var active = i === activeIndex;
+        var video = slide.querySelector("video");
+        if (!active && video) video.pause();
         slide.classList.toggle("is-active", active);
         slide.setAttribute("aria-hidden", String(!active));
       });
@@ -197,7 +198,11 @@
       });
 
       if (announce && status) {
-        status.textContent = slides[activeIndex].querySelector("img").alt;
+        var activeImage = slides[activeIndex].querySelector("img");
+        var activeVideo = slides[activeIndex].querySelector("video");
+        status.textContent = activeImage
+          ? activeImage.alt
+          : activeVideo.getAttribute("aria-label");
         status.setAttribute("aria-live", "polite");
       } else if (status) {
         status.setAttribute("aria-live", "off");
@@ -212,6 +217,7 @@
     function startTimer() {
       stopTimer();
       if (!isPlaying || !isVisible || isHovered || isFocused || document.hidden) return;
+      if (slides[activeIndex].querySelector("video")) return;
       timer = window.setInterval(function () {
         showSlide(activeIndex + 1, false);
       }, 5000);
@@ -242,6 +248,12 @@
         showSlide(i, true);
         startTimer();
       });
+    });
+    slides.forEach(function (slide) {
+      var video = slide.querySelector("video");
+      if (!video) return;
+      video.addEventListener("play", stopTimer);
+      video.addEventListener("pause", startTimer);
     });
     toggle.addEventListener("click", function () {
       isPlaying = !isPlaying;
